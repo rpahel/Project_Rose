@@ -21,6 +21,6 @@ public:
 	}
 
 private:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Character Creation Item")
 	FText LocalizedName = FText::GetEmpty();
 };

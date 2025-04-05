@@ -32,9 +32,9 @@ public:
 	}
 
 private:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Character Creation Item")
 	ECCSkMCategory Category = ECCSkMCategory::NONE;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Character Creation Item", meta = (DisplayAfter = "LocalizedName"))
 	TSoftObjectPtr<USkeletalMesh> Mesh;
 };

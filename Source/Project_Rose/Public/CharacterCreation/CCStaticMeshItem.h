@@ -11,7 +11,7 @@ enum class ECCSMCategory
 	NONE		= 0 UMETA(Hidden),
 	HAT			= 1 UMETA(DisplayName = "Hat"),
 	HAIR		= 2 UMETA(DisplayName = "Hair"),
-	FACIALHAIR	= 3 UMETA(DisplayName = "Facial hair")
+	FACIAL_HAIR	= 3 UMETA(DisplayName = "Facial hair")
 };
 
 /**
@@ -34,9 +34,9 @@ public:
 	}
 
 private:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Character Creation Item")
 	ECCSMCategory Category = ECCSMCategory::NONE;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Character Creation Item", meta = (DisplayAfter = "LocalizedName"))
 	TSoftObjectPtr<UStaticMesh> Mesh;
 };
